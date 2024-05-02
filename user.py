@@ -1,3 +1,11 @@
+from language_system import LanguageSystem
+
+
 class User:
-    def __init__(self):
-        return
+    language: LanguageSystem
+
+    def __init__(self, lang: LanguageSystem):
+        self.language = lang
+
+
+
