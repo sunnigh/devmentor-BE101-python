@@ -1,15 +1,14 @@
-from email import Email
+
+
 from event import Event
-from telegram import Telegram
+from notificationmethod import NotificationMethod
 
 
 class Reserve(Event):
-    email: Email
-    telegram: Telegram
+    notificationmethod: NotificationMethod
 
-    def __init__(self, email: Email, telegram: Telegram):
-        self.email = email
-        self.telegram = telegram
+    def __init__(self, notificationmethod: NotificationMethod):
+            self.notificationmethod = notificationmethod
 
     def event(self):
         pass
