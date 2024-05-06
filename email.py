@@ -3,4 +3,4 @@ from notificationmethod import NotificationMethod
 
 class Email(NotificationMethod):
     def notify(self):
-        pass
+        print("by Email")

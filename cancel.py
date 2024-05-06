@@ -1,14 +1,15 @@
+from email import Email
 from event import Event
 from notificationmethod import NotificationMethod
-
+from telegram import Telegram
 
 
 class Cancel(Event):
-    class Signup(Event):
-        notificationmethod: NotificationMethod
 
-        def __init__(self, notificationmethod: NotificationMethod):
+    notificationmethod: NotificationMethod
+
+    def __init__(self, notificationmethod: Email or Telegram):
             self.notificationmethod = notificationmethod
 
     def event(self):
-        pass
+        print("取消課程")
