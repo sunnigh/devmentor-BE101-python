@@ -10,6 +10,10 @@ class User:
         self.username = username
 
     def do(self):
+        if self.language == enus:
+            self.event.event_en()
+        elif self.language == zhtw
+            self.event.event_tw()
         print(self.username)
 
 

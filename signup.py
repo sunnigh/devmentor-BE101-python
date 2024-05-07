@@ -8,6 +8,7 @@ from telegram import Telegram
 class Signup(Event):
     notificationmethod: NotificationMethod
 
+
     def __init__(self, notificationmethod: Sms or Email):
         self.notificationmethod = notificationmethod
 
