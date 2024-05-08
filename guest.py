@@ -9,12 +9,12 @@ from user import User
 class Guest(User):
     event: Event
 
-    def __init__(self, event: Signup):
-        self.event = event
+    def __init__(self):
+        pass
 
-    def do(self):
-        self.event.event()
+    def do(self,event: Signup):
+        event.event()
 
 
-guest = Guest(Signup(Sms.notify(self)))
-guest.do()
+guest = Guest()
+guest.do(Signup(Sms().notify()))
