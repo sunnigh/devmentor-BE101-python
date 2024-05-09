@@ -10,6 +10,7 @@ class Signup(Event):
     notificationmethod: NotificationMethod
     guest: Guest
 
+
     def __init__(self, notificationmethod: Sms or Email):
         self.notificationmethod = notificationmethod
 
