@@ -14,15 +14,25 @@ method:
         3.預約與取消(Student)
             NotifycationMethod:email & telegram
 """
-from View import User
+import enus
+from email import Email
+from guest import Guest
+from signup import Signup
+from sms import Sms
+from user import User
+from zhtw import Zhtw
 
 if __name__ == '__main__':
-    user = User()
-    user.main()
+    # language = enus.Enus()
+    # languagetw = Zhtw()
+    # user = User("Alex", language)
+    # user.do()
 
+    signup = Signup()
+    languagetw = Zhtw()
 
-
+    signup.add_notification_method(Sms())
+    # signup.add_notification_method(Email())
+    signup.event(Guest('Jonny', languagetw))
 
 # Press the green button in the gutter to run the script.
-
-

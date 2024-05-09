@@ -1,5 +1,6 @@
 import enus
 from language_system import LanguageSystem
+from zhtw import Zhtw
 
 
 class User:
@@ -17,6 +18,4 @@ class User:
         print(self.username)
 
 
-language = enus.Enus()
-user = User("Alex", language)
-user.do()
+
