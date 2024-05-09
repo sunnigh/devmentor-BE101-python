@@ -29,5 +29,3 @@ class Signup(Event):
 
 
 
-signup = Signup(Sms())
-signup.event(Guest())
