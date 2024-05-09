@@ -8,7 +8,5 @@ from user import User
 class Guest(User):
     event: Event
 
-    def __init__(self):
-        pass
 
 
