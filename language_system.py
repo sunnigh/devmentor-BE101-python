@@ -8,18 +8,21 @@ from abc import ABC, abstractmethod
 # 取消成功
 language_mapping = {
     "zh-tw": {
-        "123": "註冊成功",
-        "456": "預約成功",
-        "789": "取消成功",
+        "signup": "註冊成功",
+        "reserve": "預約成功",
+        "cancel": "取消成功",
     },
     "en-us": {
-        "123": "signup successfully",
-        "456": "reserve successfully",
-        "789": "cancel successfully",
+        "signup": "signup successfully",
+        "reserve": "reserve successfully",
+        "cancel": "cancel successfully",
     },
     "jp": {},
     "kr": {}
 }
+
+
+# 所有語系一起放在language system內以便新增
 
 
 class LanguageSystem(ABC):

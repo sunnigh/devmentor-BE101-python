@@ -9,8 +9,8 @@ from language_system import LanguageSystem, language_mapping
 
 class Enus(LanguageSystem):
     def get_sentence(self, event_key: str):
-        sentence: str = language_mapping["en-us"][event_key]
-        return sentence
+        sentence: str = language_mapping["en-us"][event_key]  # event_key:對應事件key值
+        return sentence  # # 返回對應事件英文
 
         # 建立翻譯物件
 # trans = gettext.translation('myapp', localedir='locales', languages=['zh_TW'])

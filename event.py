@@ -3,6 +3,6 @@ from user import User
 
 class Event(ABC):
     @abstractmethod
-    def event(self, user: User):
+    def launch(self, user: User):
         pass
 

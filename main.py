@@ -14,12 +14,13 @@ method:
         3.預約與取消(Student)
             NotifycationMethod:email & telegram
 """
-import enus
+from cancel import Cancel
 from email import Email
+from enus import Enus
 from guest import Guest
 from signup import Signup
 from sms import Sms
-from user import User
+from student import Student
 from zhtw import Zhtw
 
 if __name__ == '__main__':
@@ -29,10 +30,14 @@ if __name__ == '__main__':
     # user.do()
 
     signup = Signup()
+    cancel = Cancel()
     languagetw = Zhtw()
+    languageen = Enus()
 
     signup.add_notification_method(Sms())
-    # signup.add_notification_method(Email())
-    signup.event(Guest('Jonny', languagetw))
+    signup.add_notification_method(Email())
+    signup.launch(Guest('Jonny', languagetw))
+    cancel.add_notification_method(Email())
+    cancel.launch(Student('Sam', languageen))
 
 # Press the green button in the gutter to run the script.

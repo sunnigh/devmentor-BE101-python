@@ -2,5 +2,5 @@ from notificationmethod import NotificationMethod
 
 
 class Telegram(NotificationMethod):
-    def notify(self):
-        print("by Telegram")
+    def notify(self, sentence: str):
+        print("{} by Telegram".format(sentence))
