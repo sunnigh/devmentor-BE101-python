@@ -2,5 +2,7 @@ from notificationmethod import NotificationMethod
 
 
 class Email(NotificationMethod):
-    def notify(self, sentence: str):
-        print("{} by Email".format(sentence))
+
+    def launch_method(self):
+        # 執行寄送
+        return "Email"
