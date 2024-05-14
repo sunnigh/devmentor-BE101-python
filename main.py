@@ -21,6 +21,7 @@ from guest import Guest
 from signup import Signup
 from sms import Sms
 from student import Student
+from user import User
 from zhtw import Zhtw
 
 if __name__ == '__main__':
