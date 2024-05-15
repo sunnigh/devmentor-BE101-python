@@ -1,10 +1,11 @@
 from event import Event
 from guest import Guest
+from user import User
 
 
 class Signup(Event):
 
-    def launch(self, user: Guest):  # 依賴user
+    def launch(self, user: User):  # 依賴user
         """
         要求:
             echo 執行結果
