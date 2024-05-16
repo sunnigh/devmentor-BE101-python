@@ -5,7 +5,6 @@ from user import User
 
 
 class Event(ABC):
-    user: User
     notification_method: List[NotificationMethod] = []
 
     def __init__(self):
@@ -17,6 +16,13 @@ class Event(ABC):
         """
         self.notification_method.append(notification_method)
 
-    @abstractmethod
     def launch(self, user: User):
+        username: str = user.username
+        sentence: str = user.language.get_sentence(self.launch_event())
+        notify_sentence = "{} {}".format(username, sentence)
+        for method in self.notification_method:
+            method.notify(notify_sentence)
+
+    @abstractmethod
+    def launch_event(self):
         pass
