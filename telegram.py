@@ -2,5 +2,5 @@ from notificationmethod import NotificationMethod
 
 
 class Telegram(NotificationMethod):
-    def notify(self):
-        print("by Telegram")
+    def launch_method(self):
+        return "Telegram"
