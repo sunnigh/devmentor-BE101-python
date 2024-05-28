@@ -27,7 +27,6 @@ language_mapping = {
 
 class LanguageSystem(ABC):
 
-
     def get_sentence(self, event_key: str):
         sentence: str = language_mapping[self.get_language()][event_key]  # event_key:對應事件key值
         return sentence
