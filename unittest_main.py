@@ -1,4 +1,6 @@
 import unittest
+
+from notificationmethod import NotificationMethod
 from signup import Signup
 from cancel import Cancel
 from guest import Guest
@@ -15,9 +17,13 @@ class TestEvent(unittest.TestCase):
         signup = Signup()
         signup.add_notification_method(Sms())
         guest = Guest('Jonny', Zhtw())
-        signup.launch(guest)
+        # signup.launch(guest)
+        notificationmethod = Sms()
+        # notificationmethod.notify('Jonny 註冊成功')
         # Assert
-        self.assertEqual('Jonny 註冊成功 by SMS', 'Jonny 註冊成功 by SMS')
+        self.assertEqual(signup.launch(guest), notificationmethod.notify('Jonny 註冊成功'))
+
+
 
     def test_signup_with_email_notification(self):
         signup = Signup()
