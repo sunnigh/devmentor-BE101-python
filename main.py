@@ -47,8 +47,8 @@ if __name__ == '__main__':
     congra.add_notification_method(Line())
     user = User("one", Enus())
     user2 = User("two", Zhtw())
-    congra.get_infomation(user)
-    congra.get_infomation(user2)
+    congra.get_information(user)
+    congra.get_information(user2)
     congra.launch_event()
 
 
