@@ -1,5 +1,6 @@
 import unittest
 
+from fakenotify import FakeNotify
 from notificationmethod import NotificationMethod
 from signup import Signup
 from cancel import Cancel
@@ -14,14 +15,18 @@ from zhtw import Zhtw
 class TestEvent(unittest.TestCase):
 
     def test_signup_with_sms_notification(self):
+
+        fake_notify = FakeNotify()
         signup = Signup()
-        signup.add_notification_method(Sms())
+        signup.add_notification_method(fake_notify)
         guest = Guest('Jonny', Zhtw())
-        # signup.launch(guest)
-        notificationmethod = Sms()
-        # notificationmethod.notify('Jonny 註冊成功')
-        # Assert
-        self.assertEqual(signup.launch(guest), notificationmethod.notify('Jonny 註冊成功'))
+        signup.launch(guest)
+
+        self.assertEqual(
+            "Jonny 註冊成功",
+            fake_notify.expect_sentence
+        )
+
 
 
 
