@@ -47,9 +47,8 @@ if __name__ == '__main__':
     congra.add_notification_method(Line())
     user = User("one", Enus())
     user2 = User("two", Zhtw())
-    congra.get_information(user)
-    congra.get_information(user2)
-    congra.launch_event()
+    congra.launch(user)
+    congra.launch(user2)
 
 
 # Press the green button in the gutter to run the script.
