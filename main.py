@@ -15,7 +15,7 @@ method:
             NotifycationMethod:email & telegram
 """
 from cancel import Cancel
-from email import Email
+from email101 import Email
 from enus import Enus
 from guest import Guest
 from signup import Signup
