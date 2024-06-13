@@ -11,11 +11,13 @@ language_mapping = {
         "signup": "註冊成功",
         "reserve": "預約成功",
         "cancel": "取消成功",
+        "congratulate": "祝你新年快樂",
     },
     "en-us": {
         "signup": "signup successfully",
         "reserve": "reserve successfully",
         "cancel": "cancel successfully",
+        "congratulate": "Happy Chinese New Year",
     },
     "jp": {},
     "kr": {}

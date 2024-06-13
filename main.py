@@ -15,9 +15,10 @@ method:
             NotifycationMethod:email & telegram
 """
 from cancel import Cancel
-from email101 import Email
+from congratulate import Congratulate
 from enus import Enus
 from guest import Guest
+from line import Line
 from signup import Signup
 from sms import Sms
 from student import Student
@@ -34,11 +35,19 @@ if __name__ == '__main__':
     cancel = Cancel()
     languagetw = Zhtw()
     languageen = Enus()
+    congra = Congratulate()
 
     signup.add_notification_method(Sms())
     signup.add_notification_method(Email())
     signup.launch(Guest('Jonny', languagetw))
     cancel.add_notification_method(Email())
     cancel.launch(Student('Sam', languageen))
+
+    congra.add_notification_method(Line())
+    user = User("one", Enus())
+    user2 = User("two", Zhtw())
+    congra.launch(user)
+    congra.launch(user2)
+
 
 # Press the green button in the gutter to run the script.
