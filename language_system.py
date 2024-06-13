@@ -11,11 +11,13 @@ language_mapping = {
         "signup": "註冊成功",
         "reserve": "預約成功",
         "cancel": "取消成功",
+        "congratulate": "祝你新年快樂",
     },
     "en-us": {
         "signup": "signup successfully",
         "reserve": "reserve successfully",
         "cancel": "cancel successfully",
+        "congratulate": "Happy Chinese New Year",
     },
     "jp": {},
     "kr": {}
@@ -26,7 +28,6 @@ language_mapping = {
 
 
 class LanguageSystem(ABC):
-
 
     def get_sentence(self, event_key: str):
         sentence: str = language_mapping[self.get_language()][event_key]  # event_key:對應事件key值
