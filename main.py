@@ -16,7 +16,6 @@ method:
 """
 from cancel import Cancel
 from congratulate import Congratulate
-from email import Email
 from enus import Enus
 from guest import Guest
 from line import Line
